@@ -1,0 +1,30 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 100px;
+    border-top: 3px solid rgb(174, 141, 141);
+    border-bottom: 3px solid rgb(174, 141, 141);
+
+    margin: 0 100px;
+   margin-bottom: 50px;
+   margin-top: 0;
+   gap: 20px;
+div{
+    display: block;
+    margin-left: auto;
+    padding-right: 300px;
+    padding-left: 50px;
+    img{
+        width: 500px;
+        height: 550px;
+     }
+}
+
+h1{
+    font-size: 50px;
+    padding-right: 230px;
+    color: #a73afd;
+}
+
+}

@@ -1,0 +1,117 @@
+.wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.content{
+    width: 400px;
+    height: 300px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px;
+    gap: 10px;
+
+    label{
+        font-size: 25px;
+        font-weight: 500;
+    }
+    .btn{
+        background-color: #a73afd;
+        width: 80%;
+        height: 50px;
+        border-radius: 10px;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       transition: all 0.2s ease-in-out;
+       cursor: pointer;
+    
+       &:hover{
+        background-color: #9744d6;
+        transition: all 0.2s ease-in-out;
+       }
+        button{
+          width: 100%;
+          height: 100%;
+            border: none;
+            background-color: transparent;
+            font-size: 20px;
+            color: white;
+            cursor: pointer;
+            &:disabled{
+              background-color: #8f8a93;
+              border-radius: 10px;
+             }
+        }
+    }
+ 
+  .input{
+   
+    border-radius: 8px;
+    width: 80%;
+    padding: 10px;
+    background-color: rgb(231, 233, 236);
+    input{
+        border: none;
+        outline: none;
+        width: 100%;
+        height: 100%;
+        font-size: 20px;
+        background-color: transparent;
+    }
+  }
+  .accept{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    svg{
+        fill: #a73afd;
+    }
+  p{
+    font-size: 12px;
+  }
+  }
+}
+
+.login{
+    opacity: 0;
+     background-color: #ebe7ee ;
+     position: relative;
+     left: 470px;
+     top: -400px;
+     z-index: 100;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     width: 400px;
+     height: 200px;
+     border-radius: 10px;
+     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;;
+     padding: 10px;
+     color: rgb(29, 24, 24);
+     border: 1px solid black;
+     .ok{
+      fill: rgb(15, 159, 8);
+      border: 1px solid black;
+      border-radius: 8px;
+      background-color: white;
+      margin-left: 5px;
+     }
+     .close{
+         position: absolute;
+         top: 5px;
+         left: 180px;
+         cursor: pointer;
+         fill: rgb(81, 76, 76);
+        &:hover{
+         fill: #be1010;
+        }
+     }
+
+}

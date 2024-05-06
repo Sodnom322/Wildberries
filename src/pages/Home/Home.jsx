@@ -10,6 +10,7 @@ import six from "../../assets/images/IMG_8099.JPG";
 import seven from "../../assets/images/IMG_8092.JPG";
 import eight from "../../assets/images/IMG_8093.JPG";
 import { useNavigate } from "react-router-dom";
+import Size from "../../components/Size/Size";
 
 const cross = [
   {
@@ -64,6 +65,7 @@ const cross = [
 
 function Home() {
   const [crossAll, setCrossAll] = React.useState([]);
+  const [popUp, setPopUp] = React.useState(false);
   const navigate = useNavigate();
 
   React.useEffect(() => {
@@ -75,11 +77,41 @@ function Home() {
     setCrossAll(parseData);
   }, []);
 
+  const handlePopUp = () => {
+    setPopUp((prev) => !prev);
+  };
+
   return (
     <div className={styles.home}>
       {crossAll.map((obj) => {
-        return <OneItem key={obj.id} {...obj} />;
+        return <OneItem handlePopUp={handlePopUp} key={obj.id} {...obj} />;
       })}
+      {popUp && (
+        <div className={styles.size}>
+          <div className={styles.divfirst}>
+            <h3>Выберите размер</h3>
+            <svg
+              onClick={handlePopUp}
+              class="basket_close__6R201"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 50 50"
+              width="23x"
+              height="23px"
+            >
+              <path d="M 7.71875 6.28125 L 6.28125 7.71875 L 23.5625 25 L 6.28125 42.28125 L 7.71875 43.71875 L 25 26.4375 L 42.28125 43.71875 L 43.71875 42.28125 L 26.4375 25 L 43.71875 7.71875 L 42.28125 6.28125 L 25 23.5625 Z"></path>
+            </svg>
+
+            <p>Таблица размеров</p>
+          </div>
+          <div className={styles.sizes}>
+            <Size size={41} sizeSm={26.5} />
+            <Size size={42} sizeSm={27} />
+            <Size size={43} sizeSm={27.5} />
+            <Size size={44} sizeSm={28} />
+            <Size size={45} sizeSm={28.5} />
+          </div>
+        </div>
+      )}
     </div>
   );
 }
